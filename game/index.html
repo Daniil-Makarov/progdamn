@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Platforms Overlord</title>
-    <link rel="stylesheet" href="game.css">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <canvas id="unity-canvas"></canvas>
-    <script src="Build/6.loader.js"></script>
+    <script src="Build/game.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -26,9 +26,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/6.data",
-        frameworkUrl: "Build/6.framework.js",
-        codeUrl: "Build/6.wasm",
+        dataUrl: "Build/game.data",
+        frameworkUrl: "Build/game.framework.js",
+        codeUrl: "Build/game.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "progdamn",
         productName: "Platforms Overlord",
