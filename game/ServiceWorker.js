@@ -1,4 +1,4 @@
-const cacheName = "progdamn-TestGame-0.0.1";
+const cacheName = "progdamn-TestGame-0.0.2";
 const contentToCache = [
     "Build/game.loader.js",
     "Build/game.framework.js",
