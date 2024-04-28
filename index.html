@@ -10,5 +10,30 @@
         <div>
             <img src="images/logo.png" alt="progdamn logo">
         </div>
+        <script>
+            function getUserData() {
+                if (window.Telegram.WebApp.initDataUnsafe) {
+                    const user = window.Telegram.WebApp.initDataUnsafe.user;
+                    if (user) {
+                        return {
+                            id: user.id.toString(),
+                            first_name: user.first_name
+                        };
+                    }
+                }
+                return null;
+            }
+        
+            function sendDataToUnity(userData) {
+                if (userData) {
+                    SendMessage('UserDataReceiver', 'ReceiveUserData', JSON.stringify(userData));
+                }
+            }
+        
+            document.addEventListener('DOMContentLoaded', function () {
+                const userData = getUserData();
+                sendDataToUnity(userData);
+            });
+        </script>
     </body>
 </html>
