@@ -1,9 +1,9 @@
 const cacheName = "progdamn-TestGame-0.0.1";
 const contentToCache = [
     "Build/game.loader.js",
-    "Build/game.framework.js.gz",
-    "Build/game.data.gz",
-    "Build/game.wasm.gz",
+    "Build/game.framework.js",
+    "Build/game.data",
+    "Build/game.wasm",
     "TemplateData/style.css"
 
 ];

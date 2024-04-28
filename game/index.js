@@ -38,9 +38,9 @@ window.addEventListener("load", function () {
   var buildUrl = "Build";
   var loaderUrl = buildUrl + "/game.loader.js";
   var config = {
-    dataUrl: buildUrl + "/game.data.gz",
-    frameworkUrl: buildUrl + "/game.framework.js.gz",
-    codeUrl: buildUrl + "/game.wasm.gz",
+    dataUrl: buildUrl + "/game.data",
+    frameworkUrl: buildUrl + "/game.framework.js",
+    codeUrl: buildUrl + "/game.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "progdamn",
     productName: "TestGame",
