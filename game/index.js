@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
     streamingAssetsUrl: "StreamingAssets",
     companyName: "progdamn",
     productName: "TestGame",
-    productVersion: "0.0.4",
+    productVersion: "0.0.5",
     showBanner: unityShowBanner,
   };
 
@@ -77,34 +77,4 @@ window.addEventListener("load", function () {
       alert(message);
     });
   };
-  
   document.body.appendChild(script);
-
-  function getUserData() {
-      if (window.Telegram.WebApp.initDataUnsafe) {
-          const user = window.Telegram.WebApp.initDataUnsafe.user;
-          if (user) {
-              return {
-                  id: user.id.toString(),
-                  first_name: user.first_name,
-                  second_name: user.last_name,
-                  username: user.username
-              };
-          }
-      }
-      return null;
-  }
-
-  function sendDataToUnity(userData) {
-      if (userData) {
-          unityInstanceRef.SendMessage('UserDataReceiver', 'ReceiveUserData', JSON.stringify(userData));
-      }
-      else {
-          unityInstanceRef.SendMessage('UserDataReceiver', 'ReceiveUserData', "");
-      }
-  }
-
-  window.Telegram.WebApp.ready(function() {
-      const userData = getUserData();
-      sendDataToUnity(userData);
-  });
