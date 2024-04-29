@@ -17,7 +17,7 @@
   
       function sendDataToUnity(userData) {
           if (userData) {
-              SendMessage('GameObjectName', 'ReceiveUserData', JSON.stringify(userData));
+              SendMessage('UserDataReceiver', 'ReceiveUserData', JSON.stringify(userData));
           }
       }
   
