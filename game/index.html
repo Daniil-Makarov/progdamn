@@ -39,6 +39,9 @@
           if (userData) {
               SendMessage('UserDataReceiver', 'ReceiveUserData', JSON.stringify(userData));
           }
+          else {
+              SendMessage('UserDataReceiver', 'ReceiveUserData', "");
+          }
       }
   
       document.addEventListener('DOMContentLoaded', function () {
