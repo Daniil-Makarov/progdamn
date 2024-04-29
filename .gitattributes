@@ -1,1 +1,0 @@
-game/Build/game.wasm filter=lfs diff=lfs merge=lfs -text
