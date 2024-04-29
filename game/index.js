@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
     streamingAssetsUrl: "StreamingAssets",
     companyName: "progdamn",
     productName: "TestGame",
-    productVersion: "0.0.6",
+    productVersion: "0.0.7",
     showBanner: unityShowBanner,
   };
 
