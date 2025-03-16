@@ -5,35 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>progdamn</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
     </head>
     <body>
-        <div>
-            <img src="images/logo.png" alt="progdamn logo">
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="images/logo.png" alt="progdamn logo">
+            </div>
+            <div class="separator"></div>
+            <div class="links-container">
+                <a class="github" href="https://github.com/Daniil-Makarov">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a class="itch-io" href="https://progdamn.itch.io/">
+                    <i class="fab fa-itch-io"></i> Itch.io
+                </a>
+                <a class="google-play" href="https://play.google.com/store/apps/dev?id=7910446471939887518">
+                    <i class="fab fa-google-play"></i> Google Play
+                </a>
+                <a class="youtube" href="https://www.youtube.com/@progdamn">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a class="telegram" href="https://t.me/progdamn">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a class="steam" href="https://steamcommunity.com/id/progdamn/">
+                    <i class="fab fa-steam"></i> Steam
+                </a>
+            </div>
         </div>
-        <script>
-            function getUserData() {
-                if (window.Telegram.WebApp.initDataUnsafe) {
-                    const user = window.Telegram.WebApp.initDataUnsafe.user;
-                    if (user) {
-                        return {
-                            id: user.id.toString(),
-                            first_name: user.first_name
-                        };
-                    }
-                }
-                return null;
-            }
-        
-            function sendDataToUnity(userData) {
-                if (userData) {
-                    SendMessage('UserDataReceiver', 'ReceiveUserData', JSON.stringify(userData));
-                }
-            }
-        
-            document.addEventListener('DOMContentLoaded', function () {
-                const userData = getUserData();
-                sendDataToUnity(userData);
-            });
-        </script>
     </body>
 </html>
